@@ -21,17 +21,17 @@ import { showCreator, deleteCharacter, getCharacterSpawns } from '../../actions/
 const useStyles = makeStyles((theme) => ({
 	wrapper: {
 		width: 450,
-		height: '90%',
+		height: 'fit-content',
 		position: 'absolute',
 		top: 0,
 		bottom: 0,
 		right: '5%',
 		margin: 'auto',
+		padding: 20,
 		background: theme.palette.secondary.dark,
 	},
 	createButton: {
-		position: 'absolute',
-		left: -63,
+		width : 410,
 		borderRadius: 0,
 		padding: 13,
 		background: theme.palette.primary.main,
@@ -68,6 +68,8 @@ const useStyles = makeStyles((theme) => ({
 		whiteSpace: 'nowrap',
 		overflow: 'hidden',
 		textOverflow: 'ellipsis',
+		fontFamily: "'Oswald', sans-serif !important",
+		fontWeight: 'bold',
 	},
 	charList: {
 		padding: 0,
@@ -94,7 +96,6 @@ const useStyles = makeStyles((theme) => ({
 		fontWeight: '500',
 		display: 'inline-block',
 		padding: '10px 20px',
-		borderRadius: 3,
 		userSelect: 'none',
 		margin: 10,
 		width: '40%',

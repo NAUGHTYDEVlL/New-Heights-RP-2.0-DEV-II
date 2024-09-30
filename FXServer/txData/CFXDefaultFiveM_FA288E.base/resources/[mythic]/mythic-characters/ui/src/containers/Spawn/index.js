@@ -1,60 +1,61 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, ButtonGroup } from '@mui/material';
+import { Button, ButtonGroup, List } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import SpawnButton from '../../components/SpawnButton';
 import { spawnToWorld, deselectCharacter } from '../../actions/characterActions';
 
 const useStyles = makeStyles((theme) => ({
-	container: {
-		position: 'absolute',
-		top: '5%',
-		right: '5%',
-		height: '90%',
+	wrapper: {
 		width: 450,
-	},
-	wrapper: {},
-	innerWrapper: {
-		position: 'absolute',
-		width: 450,
-		height: '100%',
-		overflow: 'hidden',
-		textAlign: 'center',
-		maxHeight: '100%',
-		background: theme.palette.secondary.dark,
-	},
-	body: {
 		height: 'fit-content',
-		display: 'block',
-		width: '100%',
-		maxHeight: '94%',
-		height: '100%',
+		maxHeight: '80%',
+		position: 'absolute',
+		top: 0,
+		bottom: 0,
+		right: '5%',
+		margin: 'auto',
+		padding: 20,
 		background: theme.palette.secondary.dark,
-		position: 'relative',
+		display: 'flex',
+		flexDirection: 'column',
+		overflow: 'hidden',
+	},
+	bodyWrapper: {
+		textAlign: 'center',
+		width: '100%',
+		flexGrow: 1,
+		overflow: 'hidden',
+		display: 'flex',
+		flexDirection: 'column',
+	},
+	spawnList: {
+		padding: 0,
 		overflowY: 'auto',
 		overflowX: 'hidden',
+		flexGrow: 1,
 		'&::-webkit-scrollbar': {
 			width: 6,
 		},
 		'&::-webkit-scrollbar-thumb': {
-			background: '#333333',
+			background: '#131317',
 		},
 		'&::-webkit-scrollbar-thumb:hover': {
 			background: theme.palette.primary.main,
 		},
 		'&::-webkit-scrollbar-track': {
-			background: theme.palette.secondary.dark,
+			background: theme.palette.secondary.main,
 		},
 	},
 	header: {
 		borderLeft: `1px solid ${theme.palette.secondary.main}`,
 		padding: 15,
-		fontSize: 24,
-		background: theme.palette.secondary.light,
+		background: theme.palette.secondary.main,
 		color: theme.palette.text.main,
 		whiteSpace: 'nowrap',
-		overflow: 'hidden',
 		textOverflow: 'ellipsis',
+		fontFamily: "'Oswald', sans-serif !important",
+		fontWeight: 'bold',
 	},
 	positive: {
 		border: `2px solid ${theme.palette.success.dark}`,
@@ -96,6 +97,8 @@ const useStyles = makeStyles((theme) => ({
 		margin: 'auto',
 	},
 }));
+
+
 const Spawn = (props) => {
 	const classes = useStyles();
 
@@ -109,18 +112,16 @@ const Spawn = (props) => {
 
 	return (
 		<>
-			<div className={classes.container}>
-				<div className={classes.wrapper}>
-					<div className={classes.innerWrapper}>
-						<div className={classes.header}>
-							<span>Select Your Spawn</span>
-						</div>
-						<div className={classes.body}>
-							{props.spawns.map((spawn, i) => {
-								return <SpawnButton key={i} type="button" spawn={spawn} />;
-							})}
-						</div>
+			<div className={classes.wrapper}>
+				<div className={classes.bodyWrapper}>
+					<div className={classes.header}>
+						<span>Select Your Spawn</span>
 					</div>
+					<List className={classes.spawnList}>
+						{props.spawns.map((spawn, i) => (
+							<SpawnButton key={i} type="button" spawn={spawn} />
+						))}
+					</List>
 				</div>
 			</div>
 			<div className={classes.actions}>

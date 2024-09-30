@@ -44,6 +44,13 @@ const useStyles = makeStyles((theme) => ({
 	details: {
 		display: 'block',
 	},
+	headerText: {
+		fontFamily: "'Oswald', sans-serif !important",
+		fontWeight: 'bold',
+	},
+	headerText: {
+		fontFamily: "'Oswald', sans-serif !important",
+	}
 }));
 
 export default ({ character }) => {
@@ -79,7 +86,7 @@ export default ({ character }) => {
 					</span>
 				</div>
 				<div>
-					<span>
+					<span className={classes.characterDetails}>
 						Last Played:{' '}
 						{+character.LastPlayed === -1 ? (
 							<span className={classes.highlight}>Never</span>

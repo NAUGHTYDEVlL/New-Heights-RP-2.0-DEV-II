@@ -5,67 +5,70 @@ Spawn = {
     InitCamera = function(self)
         TransitionToBlurred(500)
         DoScreenFadeOut(500)
-        cam = CreateCamWithParams('DEFAULT_SCRIPTED_CAMERA', 600.1, 507.49, 644.86, 10.76, 0.00, 0.00, 100.00, false, 0)
+        cam = CreateCamWithParams("DEFAULT_SCRIPTED_CAMERA", -590.5926, -26.55881, 284.9984, -10.0, 0.0, 25.81, 60.0, false, 0)
         SetCamActiveWithInterp(cam, true, 900, true, true)
         RenderScriptCams(true, false, 1, true, true)
         DisplayRadar(false)
     end,
     Init = function(self)
         local ped = PlayerPedId()
---      ShutdownLoadingScreenNui()
-        SetEntityCoords(ped, 600.1, 507.49, 644.86)
+--        ShutdownLoadingScreenNui()
+        while not HasCollisionLoadedAroundEntity(PlayerPedId()) do -- Added as a 'hotfix' for falling through the ground because collision wasn't loaded yet
+            SetEntityCoords(ped, -783.09, 334.99, 188.0)
+            Citizen.Wait(1)
+        end
         FreezeEntityPosition(ped, true)
         SetEntityVisible(ped, false)
         DoScreenFadeIn(500)
-        Wait(500) -- Why the fuck does NUI just not do this without a wait here???
+        Citizen.Wait(500) -- Why the fuck does NUI just not do this without a wait here???
         SetNuiFocus(true, true)
         SendNUIMessage({ type = 'APP_SHOW' })
     end,
     SpawnToWorld = function(self, data, cb)
         DoScreenFadeOut(500)
         while not IsScreenFadedOut() do
-            Wait(10)
+            Citizen.Wait(10)
         end
-
+    
         local player = PlayerPedId()
         SetTimecycleModifier('default')
-
+    
         local model = `mp_f_freemode_01`
         if tonumber(data.Gender) == 0 then
             model = `mp_m_freemode_01`
         end
-
+    
         RequestModel(model)
-
+    
         while not HasModelLoaded(model) do
-          Wait(500)
+          Citizen.Wait(500)
         end
         SetPlayerModel(PlayerId(), model)
         player = PlayerPedId()
         SetPedDefaultComponentVariation(player)
         SetEntityAsMissionEntity(player, true, true)
         SetModelAsNoLongerNeeded(model)
-
-        Wait(300)
+    
+        Citizen.Wait(300)
 
         DestroyAllCams(true)
         RenderScriptCams(false, true, 1, true, true)
         FreezeEntityPosition(player, false)
-
+    
         NetworkSetEntityInvisibleToNetwork(player, false)
         SetEntityVisible(player, true)
         FreezeEntityPosition(player, false)
-
         cam = nil
-
+    
         SetPlayerInvincible(PlayerId(), false)
         SetCanAttackFriendly(player, true, true)
         NetworkSetFriendlyFireOption(true)
-
+        SetEntityCollision(player, true, true)
+    
         SetEntityMaxHealth(PlayerPedId(), 200)
         SetEntityHealth(PlayerPedId(), data.HP > 100 and data.HP or 200)
         DisplayHud(true)
-
+        
         if data.action ~= nil then
             TriggerEvent(data.action, data.data)
         else
@@ -74,11 +77,11 @@ Spawn = {
         end
 
         SetFocusEntity(PlayerPedId())
-
-        LocalPlayer.state:set('ped', player, true)
+        
+        LocalPlayer.state.ped = player
 
         SetNuiFocus(false)
-
+    
         TransitionFromBlurred(500)
         cb()
     end
