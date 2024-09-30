@@ -1,0 +1,21 @@
+[
+  {
+    "name": "NAUGHTYDEVIL",
+    "master": true,
+    "password_hash": "$2a$11$orz7iJPdYlNHSzse0vDJs.APOlDHPVqogxByY8GV.NKoR3gKiWFL6",
+    "providers": {
+      "citizenfx": {
+        "id": "NAUGHTYDEVIL",
+        "identifier": "fivem:10638339",
+        "data": {
+          "sub": "50f40bffc38e92f8aefb77c8f5bcb2a0",
+          "nameid": "https://forum.cfx.re/internal/user/10638339",
+          "name": "NAUGHTYDEVIL",
+          "picture": "https://avatars.discourse.org/v4/letter/n/7933a0/256.png",
+          "profile": "https://forum.cfx.re/u/NAUGHTYDEVIL"
+        }
+      }
+    },
+    "permissions": []
+  }
+]
