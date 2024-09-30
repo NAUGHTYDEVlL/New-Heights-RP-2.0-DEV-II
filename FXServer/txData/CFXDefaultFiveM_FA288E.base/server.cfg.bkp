@@ -1,0 +1,47 @@
+endpoint_add_tcp "0.0.0.0:30120"
+endpoint_add_udp "0.0.0.0:30120"
+
+exec ./configs/environment.cfg
+
+set net_tcpConnLimit 65535
+
+
+sv_enforceGameBuild 3095
+sv_endpointPrivacy true
+sv_scriptHookAllowed 0
+
+add_ace group.admin command allow # allow all commands
+add_ace group.admin command.quit deny # but don't allow quit
+add_ace group.admin sqz_ac.bypass allow
+add_ace group.admin sqz_ac.admin allow
+
+add_principal resource.mythic-base group.admin
+setr profile_skfx 0 # Does this actually fucking work? Yes
+
+setr voice_useNativeAudio true
+setr voice_useSendingRangeOnly true
+
+sv_licenseKey "cfxk_8zOM8fY070sXMDoNwhsZ_14i1q1"
+sv_hostname "New Heights 2.0 DEV II"
+sets sv_projectName "New Heights 2.0 DEV II"
+sets sv_projectDesc "An custom FiveM RP framework"
+sets locale "en-US"
+load_server_icon logo.png
+sets banner_detail "https://ibb.co/cr2vvwt"
+sets banner_connecting "https://ibb.co/cr2vvwt"
+set SERVER_TYPE "ptr"
+# Banners & Logos
+sets banner_detail "https://i.imgur.com/Q43huBc.jpeg"
+sets banner_connecting "https://i.imgur.com/Q43huBc.jpeg"
+load_server_icon logo96.png
+
+sets locale "en-US"
+
+exec ./configs/resources.cfg
+
+setr mfw_version 1.0.0
+setr discord_app ""
+
+setr game_enableFlyThroughWindscreen true
+
+# sets sv_pureLevel 1
