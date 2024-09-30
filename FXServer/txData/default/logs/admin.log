@@ -90,3 +90,45 @@
 ======== txAdmin v6.0.2 atop fxserver 7290 Starting - 9/30/2024, 2:28:18 AM
 ================================================================
 [02:29:05][NAUGHTYDEVIL] logged in via in-game ui
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 7290 Starting - 9/30/2024, 2:35:27 AM
+================================================================
+[02:36:59][NAUGHTYDEVIL] logged in from 127.0.0.1 via citizenfx
+[02:37:02][NAUGHTYDEVIL] executed "ensure "mythic-hud""
+[02:37:56][NAUGHTYDEVIL] logged in via in-game ui
+[02:42:57][NAUGHTYDEVIL] executed "ensure "mythic-inventory""
+[02:43:30][NAUGHTYDEVIL] executed "ensure "mythic-hud""
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 7290 Starting - 9/30/2024, 2:46:43 AM
+================================================================
+[02:47:36][NAUGHTYDEVIL] logged in via in-game ui
+[02:52:16][NAUGHTYDEVIL] logged in from 127.0.0.1 via citizenfx
+[02:52:16][NAUGHTYDEVIL] logged in via in-game ui
+[02:52:36][NAUGHTYDEVIL] executed "refresh"
+[02:52:45][NAUGHTYDEVIL] executed "ensure "sml_lux_hotelroom_1a""
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 7290 Starting - 9/30/2024, 2:56:29 AM
+================================================================
+[02:57:29][NAUGHTYDEVIL] logged in via in-game ui
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 7290 Starting - 9/30/2024, 3:44:13 AM
+================================================================
+[03:45:23][NAUGHTYDEVIL] logged in via in-game ui
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 7290 Starting - 9/30/2024, 3:46:49 AM
+================================================================
+[03:47:59][NAUGHTYDEVIL] logged in via in-game ui
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 7290 Starting - 9/30/2024, 3:51:13 AM
+================================================================
+[03:52:01][NAUGHTYDEVIL] logged in via in-game ui
+[03:56:52][NAUGHTYDEVIL] logged in from 127.0.0.1 via citizenfx
+[03:56:52][NAUGHTYDEVIL] logged in via in-game ui
+[03:56:57][NAUGHTYDEVIL] executed "refresh"
+[03:57:02][NAUGHTYDEVIL] executed "ensure "DigitalDen""

@@ -38,6 +38,7 @@ load_server_icon logo96.png
 sets locale "en-US"
 
 exec ./configs/resources.cfg
+ensure [standalone]
 
 setr mfw_version 1.0.0
 setr discord_app ""

@@ -1,0 +1,29 @@
+---- LOCATION ----
+
+MAP COORDS
+
+-290.7909, 1648.47449, -160.078
+
+
+---- HOW TO USE ----
+
+YOU CAN CHOOSE BETWEEN 2 COLOR VERSIONS 
+
+- [dark]
+
+- [white]
+
+DELETE the FOLDER with the COLOR name you DON'T WANT TO USE!
+
+You can CHANGE all the TEXTURES editing the .ytd file
+
+- fm_showroom_textures.ytd
+
+
+---- Map created by FrancoFM -----
+
+For any problem open a ticket on my discord!
+
+- https://discord.gg/TZeRjWeFKQ
+
+---- IT IS FORBIDDEN TO REPUBLISH THE MAP OR RESELL IT ----
