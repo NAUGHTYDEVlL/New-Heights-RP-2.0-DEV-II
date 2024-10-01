@@ -1,8 +1,7 @@
-fx_version 'cerulean'
+fx_version 'bodacious'
 game 'gta5'
 
-author 'GABZ'
-description 'HARMONY'
-version '2.0.0'
-
 this_is_a_map 'yes'
+
+file 'gabzharmony.xml'
+data_file 'TIMECYCLEMOD_FILE' 'gabzharmony.xml'
