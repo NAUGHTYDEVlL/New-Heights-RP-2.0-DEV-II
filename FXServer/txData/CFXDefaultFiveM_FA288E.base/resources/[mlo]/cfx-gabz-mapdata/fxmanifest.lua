@@ -1,14 +1,13 @@
-fx_version 'cerulean'
-game 'gta5'
+fx_version "cerulean"
 
-author 'GABZ'
-description 'MAPDATA'
-version '2.0.0'
+game "gta5"
 
-this_is_a_map 'yes'
+lua54 "yes"
 
-data_file 'TIMECYCLEMOD_FILE' 'gabz_timecycle_mods1.xml'
+this_is_a_map "yes"
 
-files {
-    'gabz_timecycle_mods1.xml',
-}
+data_file "TIMECYCLEMOD_FILE" "gabz_timecycle_mods1.xml"
+
+files {"gabz_timecycle_mods1.xml"}
+
+client_script {"gabz_entityset_mods1.lua"}
