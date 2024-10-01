@@ -132,3 +132,24 @@
 [03:56:52][NAUGHTYDEVIL] logged in via in-game ui
 [03:56:57][NAUGHTYDEVIL] executed "refresh"
 [03:57:02][NAUGHTYDEVIL] executed "ensure "DigitalDen""
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 7290 Starting - 9/30/2024, 11:41:47 AM
+================================================================
+[11:42:44][NAUGHTYDEVIL] logged in via in-game ui
+[12:03:04][NAUGHTYDEVIL] logged in from 127.0.0.1 via citizenfx
+[12:03:04][NAUGHTYDEVIL] logged in via in-game ui
+[12:03:10][NAUGHTYDEVIL] executed "refresh"
+[12:03:15][NAUGHTYDEVIL] executed "ensure "banner_anim""
+[12:24:45][NAUGHTYDEVIL] executed "ensure "cfx-gabz-hub""
+[12:25:13][NAUGHTYDEVIL] executed "refresh"
+[12:25:18][NAUGHTYDEVIL] executed "ensure "cfx-gabz-hub""
+[12:25:56][NAUGHTYDEVIL] executed "ensure "cfx-gabz-harmony""
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 7290 Starting - 9/30/2024, 12:29:36 PM
+================================================================
+[12:30:40][NAUGHTYDEVIL] logged in via in-game ui
+[12:32:18][NAUGHTYDEVIL] logged in from 127.0.0.1 via citizenfx
+[12:32:18][NAUGHTYDEVIL] logged in via in-game ui
+[12:46:46][NAUGHTYDEVIL] executed "ensure "cfx-gabz-ottos""

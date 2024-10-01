@@ -1,8 +1,8 @@
-fx_version 'cerulean'
-game 'gta5'
+fx_version 'bodacious'
+games { 'gta5' }
 
-author 'GABZ'
-description 'VANILLAUNICORN'
-version '2.0.0'
+author 'Gabz'
+description 'Vanilla Unicorn'
+version '1.0.0'
 
 this_is_a_map 'yes'
